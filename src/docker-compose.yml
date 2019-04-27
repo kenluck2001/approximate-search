@@ -1,0 +1,17 @@
+version: '2.0'
+services:
+  app:
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+
+    networks:
+      - esnet
+
+
+networks:
+  esnet:
+
